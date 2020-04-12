@@ -1,2 +1,3 @@
-# print Hello World to the console
-print "Hello World"
+# print Hello, Andrew to the console
+greeting = "Hello, Andrew"
+print (greeting)
