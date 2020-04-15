@@ -1,24 +1,33 @@
 # complete this function so that it prints Hello, World
 def printHelloWorld() :
     # your code here
+    print("Hello, World")
 
 # complete this function so that it prints whatever is provided in the parameter
 def printParam(param) :
     # your code here
+    print(param)
 
 # complete this function so that it returns the sum of num1 and num2
 def sumTwoNumbers(num1, num2) :
     # your code here
+    sum = num1 + num2
+    return sum
 
 # complete this function so that it returns the square of the num parameter
 def findSquare(num) :
     # your code here
+    square = num * num
+    return square
 
 # complete this function so that it returns True if day is Wednesday
 # otherwise return False
 def dayIsWednesday(day) :
     # your code here
-
+    if day == "Wednesday" :
+        return True
+    else :
+        return False
 
 myList = [ "mainsheet", "batton", "rudder", "foil", "block" ]
 
@@ -26,11 +35,22 @@ myList = [ "mainsheet", "batton", "rudder", "foil", "block" ]
 # otherwise return "I have to get it"
 def findInList(item) :
     # your code here
+    for part in myList :
+        if part == item :
+            return ("I got it")
+        else : 
+            return ("I have to get it")
+
 
 # assuming every element in 'numList' is a number, complete this function so that it
 # returns the total sum of the elements in the list
 def complexSum(numList) :
     # your code here
+    total = 0
+    for num in numList:
+        total = total + num
+    return total
+    
 
 
 printHelloWorld()

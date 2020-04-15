@@ -14,10 +14,31 @@ users = []
 
 def createUser(fullName, email, userName, password, phoneNumber) :
     # your code here
+    #for user in users :
+    users.append({
+        'fullName': fullName,
+        'email': email,
+        'userName': userName, 
+        'password': password,
+        'phoneNumber': phoneNumber
+        })
+print (users)
 
 
 def authUser(userName, password) :
     # your code here
+    
+
+    for user in users :
+        if userName == user['userName'] and password == user['password'] :
+            return user
+     #   if userName == users['userName'] == False :
+     # is the symbol for not equal <>? not sure if I can use the == then == False... 
+      #      print ("no user found")
+       # if userName == users['userName'] == True and userName == users['password'] == False :
+        #    print ("password is incorrect")
+        
+      
 
 
 
@@ -57,10 +78,10 @@ createUser(
 )
 
 
-print(authUser("vjohns", "1234567"))
+#print(authUser("vjohns", "1234567"))
 
-print(authUser("gdom", "password."))
+#print(authUser("gdom", "password."))
 
-print(authUser("lhudson", "123"))
+#print(authUser("lhudson", "123"))
 
-print(authUser("alaynaRocks", "alaynaRocks234"))
+#print(authUser("alaynaRocks", "alaynaRocks234"))
