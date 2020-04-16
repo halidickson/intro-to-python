@@ -17,33 +17,46 @@ myList = []
 # only if the length of the list is less than 5.
 def addToList(element) :
     # your code here
-
+    myList.append(element)
+    return myList
 
 # Complete a function that removes the last element from the list
 # 'myList', and returns it unless there is one left, then leave it.
 def removeFromList() :
     # your code here
-
-
+    myList.pop()
+    return myList
 
 # Complete a function that returns the index of 'element'.
 # If the list doesn't contain the element then return -1.
 def getIndex(element) :
     # your code here
-
+    index = myList.index(element)
+    for item in myList :
+        return index
+    return -1
 
 
 # Complete a function that calls getElement() and prints the value
-# it returns.
+# it returns. 
+# Should getElement() be getIndex() from above? I'm going to assume that. 
 def printIndex(element) :
     # your code here
-
+    index = myList.index(element)
+    getIndex(element)
+    print (index)
 
 # Complete a function that removes the element 'element' from the
 # list and returns it. If the element doesn't exist, then return -1.
 def removeElement(element) :
     # your code here
-
+    for item in myList:
+        if item == element:
+            index = myList.index(element)
+            getIndex(element)
+            myList.pop(index)
+            return myList
+    return -1
 
 #-----#
 
@@ -84,7 +97,7 @@ print("13: ")
 printIndex(13)
 
 print("6: ")
-printIndex(13)
+printIndex(6)
 
 elem = removeElement(13)
 print("removed 13: ", elem)
