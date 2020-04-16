@@ -25,7 +25,7 @@ def addToList(element) :
 # 'myList', and returns it unless there is one left, then leave it.
 def removeFromList() :
     # your code here
-    if len(myList) >= 1:
+    if len(myList) > 1:
         myList.pop()
         return myList
     else:
@@ -58,8 +58,8 @@ def removeElement(element) :
         if item == element:
             index = myList.index(element)
             getIndex(element)
-            myList.pop(index)
-            return myList
+            return myList.pop(index)
+            
     return -1
 
 #-----#
