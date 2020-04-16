@@ -35,20 +35,21 @@ def removeFromList() :
 # If the list doesn't contain the element then return -1.
 def getIndex(element) :
     # your code here
-    index = myList.index(element)
-    for item in myList :
-        return index
-    return -1
-
+    for item in myList:
+        if item != element:
+            return -1
+        elif item == element:
+            return myList.index(element)
 
 # Complete a function that calls getElement() and prints the value
 # it returns. 
 # Should getElement() be getIndex() from above? I'm going to assume that. 
 def printIndex(element) :
     # your code here
-    index = myList.index(element)
-    getIndex(element)
-    print (index)
+    for item in myList:
+        if item == element:
+            getIndex(element)
+            print (myList.index(element))
 
 # Complete a function that removes the element 'element' from the
 # list and returns it. If the element doesn't exist, then return -1.
@@ -56,9 +57,8 @@ def removeElement(element) :
     # your code here
     for item in myList:
         if item == element:
-            index = myList.index(element)
             getIndex(element)
-            return myList.pop(index)
+            return myList.pop(myList.index(element))
             
     return -1
 
