@@ -17,15 +17,19 @@ myList = []
 # only if the length of the list is less than 5.
 def addToList(element) :
     # your code here
-    myList.append(element)
+    if len(myList) <= 5:
+        myList.append(element)
     return myList
 
 # Complete a function that removes the last element from the list
 # 'myList', and returns it unless there is one left, then leave it.
 def removeFromList() :
     # your code here
-    myList.pop()
-    return myList
+    if len(myList) >= 1:
+        myList.pop()
+        return myList
+    else:
+        return myList
 
 # Complete a function that returns the index of 'element'.
 # If the list doesn't contain the element then return -1.
